@@ -7,6 +7,8 @@ import request from '@/utils/request'
 export const login = data => {
   console.log('data', data)
   return request({
+    // baseURL: 'http://ttapi.research.itcast.cn/',
+    baseURL: 'http://api-toutiao-web.itheima.net/',
     method: 'POST',
     url: '/app/v1_0/authorizations',
     // data 用来设置 POST 请求体
@@ -17,8 +19,10 @@ export const login = data => {
 // 获取用户信息
 export const getUserProfile = () => {
   // const user = JSON.parse(window.localStorage.getItem('user'))
-  console.log('执行了')
+  // console.log('执行了')
   return request({
+    // baseURL: 'http://ttapi.research.itcast.cn/',
+    baseURL: 'http://api-toutiao-web.itheima.net/',
     method: 'GET',
     url: '/app/v1_0/user/profile'
     // 后端要求把需要授权的用户身份放到请求头中
